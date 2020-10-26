@@ -5,6 +5,7 @@
 
 trigger:
 - master
+variables:
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -20,3 +21,6 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- script: |
+    echo $PRIVADO
+  displayName: 'Install dependencies'
