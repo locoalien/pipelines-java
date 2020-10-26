@@ -20,5 +20,5 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 - script: |
-    echo $PRIVADO
+    echo $(privado)
   displayName: 'Install dependencies'
